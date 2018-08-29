@@ -1,0 +1,263 @@
+<?php 
+include '../include/permission.php';
+?>
+
+<html>
+	<head>
+		<title>Admin Panel</title>
+		 <link rel="stylesheet" href="../include/bootstrap/css/bootstrap.css">
+        <script src="../include/js/jquery.js"></script>
+        <script src="../include/bootstrap/js/bootstrap.js"></script>
+        <script>
+		$(function(){
+			$('.datepicker').datepicker();
+		});
+
+	</script>
+		
+	</head>
+	<body>
+		 <?php include '../include/header.php';?>
+        <div style="width:50px;height:60px;"></div>
+        <?php include '../include/sidebar.php';?>
+			<div class="col-lg-10"> 						
+				 <ul class="nav nav-tabs">
+				  <li class="active"><a data-toggle="tab" href="#medicine">Medicine</a></li>
+				  <li><a data-toggle="tab" href="#medical">Medical</a></li>
+				  <li><a data-toggle="tab" href="#accomodation">Accomodation </a></li>
+				   <li><a data-toggle="tab" href="#equipment">Equipment</a></li>
+				  <li><a data-toggle="tab" href="#others">Other Expense </a></li>
+				</ul>
+
+				<div class="tab-content">
+				  <div id="medicine" class="tab-pane fade in active">
+				    <h3>Medicine</h3>
+				    <div class="container-fluid">
+						<form class="form-horizontal" enctype="multipart/form-data" action="add-room.php" method="post">
+							<div class="form-group">
+								<label for="medicine_name"> Medicine Name</label>
+								<input  id="medicine_name" type="text" name="medicine_name" class="form-control" required>
+							</div>
+							
+							
+							<div class="form-group">
+								<label for="description"> Description </label>
+								  <input  id="description" type="text" name="description" class="form-control" required>
+							</div>
+
+							<div class="form-group">
+								<label for="category"> Category </label>
+								  <input  id="category" type="text" name="category" class="form-control" required>
+							</div>
+							<div class="form-group">
+								<label for="quantity"> Quantity </label>
+								  <input  id="quantity" type="text" name="quantity" class="form-control" required>
+							</div>
+							<div class="form-group">
+								<label for="price"> price </label>
+								<input  id="price" type="text" name="price" class="form-control" required>
+							</div>
+							
+							<div class="form-group">
+								<label for="submit"> </label>
+								<input  id="submit" type="submit" name="submit" class="btn btn-success" value="submit">
+							</div>
+							 
+							
+						</form>
+		 			</div>
+				  </div>
+				  <div id="medical" class="tab-pane fade">
+				    <h3>Medical</h3>
+					    <div class="container-fluid">
+							<form class="form-horizontal" enctype="multipart/form-data" action="add-room.php" method="post">
+								<div class="form-group">
+									<label for="service_name"> Service Name  </label>
+									<select id="service_name" name="service_name" class="form-control">
+                                            <option value="Operation">Operation</option>
+                                            <option value="checkup">checkup</option>
+                                            <option value="test">test</option>
+                                            
+                                        </select>
+								</div>
+								
+								<div class="form-group">
+									<label for="price"> price </label>
+									<input  id="price" type="text" name="price" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label for="description"> Description </label>
+									  <input  id="description" type="text" name="description" class="form-control" required>
+								</div>
+
+								<div class="form-group">
+									<label for="submit"> </label>
+									<input  id="submit" type="submit" name="submit" class="btn btn-success" value="submit">
+								</div>
+								 
+								
+							</form>
+			 			</div>
+					 </div>
+
+					 <div id="accomodation" class="tab-pane fade">
+				    <h3>Accomodation</h3>
+					    <div class="container-fluid">
+							<form class="form-horizontal" enctype="multipart/form-data" action="add-room.php" method="post">
+								<div class="form-group">
+									<label for="room_no"> Room No </label>
+									<input  id="room_no" type="text" name="room_no" class="form-control" required>
+								</div>
+								
+								<div class="form-group">
+									<label for="price"> price </label>
+									<input  id="price" type="text" name="price" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label for="description"> Description </label>
+									  <input  id="description" type="text" name="description" class="form-control" required>
+								</div>
+
+								<div class="form-group">
+									<label for="category"> Category </label>
+									  <input  id="category" type="text" name="category" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label for="status"> Status </label>
+									  <input  id="status" type="text" name="status" class="form-control" required>
+								</div>
+								
+								<div class="form-group">
+									<label for="submit"> </label>
+									<input  id="submit" type="submit" name="submit" class="btn btn-success" value="submit">
+								</div>
+								 
+								
+							</form>
+			 			</div>
+					 </div>
+
+					 <div id="equipment" class="tab-pane fade">
+				    <h3>Equipment</h3>
+					    <div class="container-fluid">
+							<form class="form-horizontal" enctype="multipart/form-data" action="add-room.php" method="post">
+								<div class="form-group">
+									<label for="room_no"> Room No </label>
+									<input  id="room_no" type="text" name="room_no" class="form-control" required>
+								</div>
+								
+								<div class="form-group">
+									<label for="price"> price </label>
+									<input  id="price" type="text" name="price" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label for="description"> Description </label>
+									  <input  id="description" type="text" name="description" class="form-control" required>
+								</div>
+
+								<div class="form-group">
+									<label for="category"> Category </label>
+									  <input  id="category" type="text" name="category" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label for="status"> Status </label>
+									  <input  id="status" type="text" name="status" class="form-control" required>
+								</div>
+								
+								<div class="form-group">
+									<label for="submit"> </label>
+									<input  id="submit" type="submit" name="submit" class="btn btn-success" value="submit">
+								</div>
+								 
+								
+							</form>
+			 			</div>
+					 </div>
+
+					 <div id="others" class="tab-pane fade">
+				    <h3>others</h3>
+					    <div class="container-fluid">
+							<form class="form-horizontal" enctype="multipart/form-data" action="add-room.php" method="post">
+								<div class="form-group">
+									<label for="room_no"> Room No </label>
+									<input  id="room_no" type="text" name="room_no" class="form-control" required>
+								</div>
+								
+								<div class="form-group">
+									<label for="price"> price </label>
+									<input  id="price" type="text" name="price" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label for="description"> Description </label>
+									  <input  id="description" type="text" name="description" class="form-control" required>
+								</div>
+
+								<div class="form-group">
+									<label for="category"> Category </label>
+									  <input  id="category" type="text" name="category" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label for="status"> Status </label>
+									  <input  id="status" type="text" name="status" class="form-control" required>
+								</div>
+								
+								<div class="form-group">
+									<label for="submit"> </label>
+									<input  id="submit" type="submit" name="submit" class="btn btn-success" value="submit">
+								</div>
+								 
+								
+							</form>
+			 			</div>
+					 </div>
+
+					 <div id="food" class="tab-pane fade">
+				    <h3>Medical</h3>
+					    <div class="container-fluid">
+							<form class="form-horizontal" enctype="multipart/form-data" action="add-room.php" method="post">
+								<div class="form-group">
+									<label for="room_no"> Room No </label>
+									<input  id="room_no" type="text" name="room_no" class="form-control" required>
+								</div>
+								
+								<div class="form-group">
+									<label for="price"> price </label>
+									<input  id="price" type="text" name="price" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label for="description"> Description </label>
+									  <input  id="description" type="text" name="description" class="form-control" required>
+								</div>
+
+								<div class="form-group">
+									<label for="category"> Category </label>
+									  <input  id="category" type="text" name="category" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label for="status"> Status </label>
+									  <input  id="status" type="text" name="status" class="form-control" required>
+								</div>
+								
+								<div class="form-group">
+									<label for="submit"> </label>
+									<input  id="submit" type="submit" name="submit" class="btn btn-success" value="submit">
+								</div>
+								 
+								
+							</form>
+			 			</div>
+					 </div>
+				</div> 
+
+
+			</div>	
+
+
+								
+
+		
+
+		<footer></footer>
+	</body>
+
+</html>
